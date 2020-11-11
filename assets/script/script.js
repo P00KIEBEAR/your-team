@@ -1,6 +1,6 @@
 'use strict';
 
-
+var teams = document.querySelector('#teams')
 var info = []
 var search = $('#search')
 var playerName = $("#playersName")
@@ -10,9 +10,9 @@ by josn or new var FirstName: and LastName:
 will have fun working on this!!!
 
 
-for (let i = allPlayers -1; i >= 0; i--){
-  if (firstName === allPlayers[i].FirstName && lastName === allPlayers[i].LastName){
-    playersInfo = allPlayers[i];
+for (let i = info[0].lenght -1; i >= 0; i--){
+  if (firstName ===info[0][i].FirstName && lastName === info[0][i].LastName){
+    playersInfo = info[0][i];
   }
 }
 
@@ -25,7 +25,7 @@ info[0][0].CurrentTeam
 
 
 
-function getPlayer() {
+function getInfo() {
   Promise.all([
     fetch('https://api.sportsdata.io/v3/nfl/scores/json/Players?format=json',
       {
@@ -49,13 +49,18 @@ function getPlayer() {
     .then(function (json) {
       info = json
       console.log(info);
+      for (let i = 0; i < info[1].length; i++) {
+        var list = document.createElement('li')
+        list.innerText = info[1][i].City + ' ' + info[1][i].Name;
+        teams.appendChild(list)
 
+      }
     }).catch(function (error) {
 
       console.log(error);
     });
 }
-
+getInfo()
 // Need to get college stat?
 
 
