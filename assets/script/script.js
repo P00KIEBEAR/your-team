@@ -5,19 +5,22 @@ var info = []
 var search = $('#search')
 var playerName = $("#playersName")
 var playersInfo = []
+var list = document.createElement('li');
 /* will have to search for player?
 by josn or new var FirstName: and LastName:
 will have fun working on this!!!
 */
 
 
-function getPlayer() {
-
+function getPlayer(list) {
+  var key = list.id
+  players.innerHTML = ""
   for (let i = info[0].length - 1; i >= 0; i--) {
-    // console.log(info[1][1].Key === info[0][i].Team)
-    if (info[1][1].Key === info[0][i].Team) {
 
-      var list = document.createElement('li')
+    console.log(key + ' ' + info[0][i].Team)
+    if (key === info[0][i].Team) {
+
+      list = document.createElement('li')
       list.innerText = info[0][i].FirstName + ' ' + info[0][i].LastName;
       players.appendChild(list)
     }
@@ -59,9 +62,12 @@ function getInfo() {
       info = json
       console.log(info);
       for (let i = 0; i < info[1].length; i++) {
-        var list = document.createElement('li')
+        list = document.createElement('li')
         list.innerText = info[1][i].City + ' ' + info[1][i].Name;
+        list.setAttribute('Onclick', 'getPlayer(this)');
+        list.setAttribute('id', info[1][i].Key);
         teams.appendChild(list)
+
 
       }
     }).catch(function (error) {

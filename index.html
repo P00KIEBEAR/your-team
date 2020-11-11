@@ -13,29 +13,30 @@
 <template id="mainPage.html"></template>
 <ons-page id="nfl">
   <v-ons-header class="center" style="align-items: center;">Welcome to my page!</v-ons-header>
-  <div class="row">
-    <v-ons-list class='col' style="margin-right: 20%;">Teams
+  <ons-row>
+    <ons-col width='20%' style="margin-left: 5%;">Teams
       <v-ons-list-item id="teams"></v-ons-list-item>
-    </v-ons-list>
-    <v-ons-list class='col' style="margin-right: 20%;">Players
+    </ons-col>
+
+
+    <ons-col width='20%' style="margin-right: 5%;">Players
       <v-ons-list-item id="players"></v-ons-list-item>
       <v-ons-list-item>
-    </v-ons-list>
-
-  </div>
-
+    </ons-col>
+    <ons-row>
 
 
-  <div style="text-align: center; margin-top: 200px">
-    <p>
-      <ons-input id="playersName" placeholder="PlayersName"></ons-input>
-    </p>
-    <p>
-      <ons-button id="search" onclick="getPlayer()">Search</ons-button>
-    </p>
-  </div>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="assets/script/script.js"></script>
+
+      <div style="text-align: center; margin-top: 200px">
+        <p>
+          <ons-input id="playersName" placeholder="PlayersName"></ons-input>
+        </p>
+        <p>
+          <ons-button id="search" onclick="getPlayer()">Search</ons-button>
+        </p>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <script src="assets/script/script.js"></script>
 </ons-page>
 
 
