@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+  <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+  <link rel="stylesheet" href="assets\css\style.css" />
+  <title>Your Team</title>
+</head>
+<template id="mainPage.html"></template>
+<ons-page id="nfl">
+  <v-ons-list style="margin-right: 20%;">Players
+    <v-ons-list-item id="players"></v-ons-list-item>
+    <v-ons-list-item>
+  </v-ons-list>
+  <v-ons-list style="margin-right: 20%;">Teams
+    <v-ons-list-item id="teams"></v-ons-list-item>
+  </v-ons-list>
+  <v-ons-list-header class="center">Welcome to my page!</v-ons-list-header>
+
+  <v-ons-list-item class="right">Login</v-ons-list-item>
+
+
+  </v-ons-list>
+
+  <div style="text-align: center; margin-top: 200px">
+    <p>
+      <ons-input id="playersName" placeholder="PlayersName"></ons-input>
+    </p>
+    <p>
+      <ons-button id="search" onclick="getPlayer()">Search</ons-button>
+    </p>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="assets/script/script.js"></script>
+</ons-page>
+
+
+</template>
+
+</html>

@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+.nfl {
+  height: 800px;
+  width: 100%;
+  margin-bottom: 100px;
+  background-image: url(assets\images\NFL.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.center {
+  text-align: center;
+  background-color: blueviolet;
+}
+
+.right {
+  float: right;
+}
