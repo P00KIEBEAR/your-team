@@ -1,5 +1,5 @@
 'use strict';
-
+var players = document.querySelector('#players')
 var teams = document.querySelector('#teams')
 var info = []
 var search = $('#search')
@@ -8,18 +8,27 @@ var playersInfo = []
 /* will have to search for player?
 by josn or new var FirstName: and LastName:
 will have fun working on this!!!
+*/
 
 
-for (let i = info[0].lenght -1; i >= 0; i--){
-  if (firstName ===info[0][i].FirstName && lastName === info[0][i].LastName){
-    playersInfo = info[0][i];
+function getPlayer() {
+
+  for (let i = info[0].length - 1; i >= 0; i--) {
+    // console.log(info[1][1].Key === info[0][i].Team)
+    if (info[1][1].Key === info[0][i].Team) {
+
+      var list = document.createElement('li')
+      list.innerText = info[0][i].FirstName + ' ' + info[0][i].LastName;
+      players.appendChild(list)
+    }
+
   }
 }
+//now  I will have to sort this 
 
-now  I will have to sort this 
 
-info[0][0].CurrentTeam
-*/
+
+
 
 
 
@@ -63,7 +72,15 @@ function getInfo() {
 getInfo()
 // Need to get college stat?
 
+/*
+for (let i = info[0].lenght - 1; i >= 0; i--) {
+    if (firstName === info[0][i].FirstName && lastName === info[0][i].LastName) {
+      playersInfo = info[0][i];
+    }
 
+  }
+
+*/
 
 
 
