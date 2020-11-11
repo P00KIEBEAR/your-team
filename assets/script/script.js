@@ -2,6 +2,7 @@
 var players = document.querySelector('#players');
 var player = document.querySelector('#player');
 var teams = document.querySelector('#teams');
+var position = document.querySelector('.position');
 //var info = JSON.parse(localStorage.getItem('info')) || [];
 var info = []
 var search = $('#search');
@@ -47,6 +48,23 @@ function getPlayer(list) {
 
 }
 
+function getPosition() {
+  console.log(position.value)
+
+  players.innerHTML = ""
+  for (let i = info[0].length - 1; i >= 0; i--) {
+
+    if (position.id === info[0][i].Position) {
+
+      list = document.createElement('li')
+      list.innerText = info[0][i].FirstName + ' ' + info[0][i].LastName;
+      list.setAttribute('Onclick', 'getPlayer(this)');
+      list.setAttribute('id', JSON.stringify(info[0][i]));
+      players.appendChild(list)
+    }
+
+  }
+}
 
 /*
 Active: true

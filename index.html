@@ -14,18 +14,33 @@
 <ons-page id="nfl">
   <v-ons-header class="center" style="align-items: center;">Welcome to my page!</v-ons-header>
   <ons-row>
-    <ons-col width='20%' style="margin-left: 5%;">Pick A Team
+    <ons-col width='15%' style="margin-left: 5%;">Pick A Team
       <v-ons-list-item id="teams"></v-ons-list-item>
     </ons-col>
 
 
-    <ons-col width='20%' style="margin-right: 5%;">Pick A Player
+    <ons-col width='15%' style="margin-right: 5%;">Pick A Player
       <v-ons-list-item id="players"></v-ons-list-item>
-      <v-ons-list-item>
+
     </ons-col>
-    <ons-col width='30%' style="margin-right: 5%;">Player
+    <ons-col width='15%' style="margin-right: 5%;">Player
       <v-ons-list-item id="player"></v-ons-list-item>
+    </ons-col>
+    <ons-col width='15%' style="margin-right: 5%;">Positions
+      <li onclick="getPosition()" class="position" id="QB">Quarterback</li>
+      <li onclick="getPosition()" class="position" id="RB">Runningback</li>
+      <li onclick="getPosition()" class="position" id="WR">Wide Reciecer</li>
+      <li onclick="getPosition()" class="position" id="TE">Tightend</li>
+      <li onclick="getPosition()" class="position" id="LB">Linebacker</li>
+      <li onclick="getPosition()" class="position" id="C">Center</li>
+    </ons-col>
+    <ons-col width='15%'>Search by Position
       <v-ons-list-item>
+        <ons-input class="position" id="position" placeholder="Position"></ons-input>
+        <ons-button id="search" onclick="getPosition()">Search</ons-button>
+
+      </v-ons-list-item>
+
     </ons-col>
     <ons-row>
 
